@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>My Web Page</title>
+  <script src="https://kit.fontawesome.com/7126d3aa59.js" crossorigin="anonymous"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  
+  <div class="search">
+    <form class="search-bar">
+      <input type="text" name="search" id="username" placeholder="Enter Github Username">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </div>
+  
+  <div class="profile"></div>
+  
+  <div class="repository">
+    <div class="repository-card">
+      <div class="filter">
+        <h2>Repositories</h2>
+        <form id="noOfRepos">
+          <input type="number" min="10" max="100" name="noOfRepos" value="10" placeholder="10">
+          <p>per page</p>
+        </form>
+      </div>
+      <div class="grid"></div>
+      <div class="page-btn">
+        <button id="prevPage"><i class="fa-solid fa-circle-chevron-left"></i></button>
+        <button id="nextPage"><i class="fa-solid fa-circle-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <template id="profile-template">
+    <div class="profile-card">
+      <div class="profile-section1">
+        <img user-img src="" alt="" class="user-img skeleton">
+        <div class="repo-pill" user-repos></div>
+      </div>
+      <div class="profile-section2">
+        <h1 user-name>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+        </h1>
+        <p user-address></p>
+        <p user-bio></p>
+      </div>
+    </div>
+  </template>
+
+  <template id="card-template">
+    <div class="repo-card">
+      <div class="repo-info">
+        <h3 repo-title>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+        </h3>
+        <div repo-language></div>
+      </div>
+      <p repo-description></p>
+    </div>
+  </template>
+
+</body>
+</html>
